@@ -68,6 +68,7 @@ button:active{
 <body>
 
 <h1>📱 Rノート</h1>
+<p id="today"></p>
 
 <div class="card">
 
@@ -136,6 +137,15 @@ document.getElementById("dinner").value);
 document.getElementById("message").innerHTML="✅ 保存しました！";
 
 setTimeout(function(){
+const today = new Date();
+
+const dateText =
+"📅 " +
+today.getFullYear() + "年" +
+(today.getMonth()+1) + "月" +
+today.getDate() + "日";
+
+document.getElementById("today").innerHTML = dateText;
 
 document.getElementById("message").innerHTML="";
 
